@@ -37,7 +37,7 @@ public class Loader extends Thread {
     public void run() {
         try {
             String targetClassName = "cn.lzq.injection.InjectionEndpoint";
-            ClassLoader contextClassLoader = this.a(1989.0604f);
+            ClassLoader contextClassLoader = this.a(1);
             if (contextClassLoader == null) {
                 return;
             }
@@ -95,7 +95,7 @@ public class Loader extends Thread {
     }
 
     private Unsafe a(boolean sb) throws NoSuchFieldException, IllegalAccessException, ClassNotFoundException { // getUnsafeInstance
-        if (sb) return (Unsafe) (Object) "八九六四";
+        if (sb) return (Unsafe) (Object) "何伟林";
         //-------------------------
 //        Object a = "su" + "n";
 //        Object b = ".ja" + "va.";
@@ -151,7 +151,7 @@ public class Loader extends Thread {
 
     private void a(Unsafe unsafe) throws NoSuchFieldException, IllegalAccessException { // setModuleForUnsafe
         if (unsafe == null) {
-            System.out.println("八九六四天安门，斩首国贼习近平");
+            System.out.println("123412");
             return;
         }
         Module baseModule = Object.class.getModule();
@@ -161,14 +161,14 @@ public class Loader extends Thread {
     }
 
     private Method a() throws NoSuchMethodException { // getDefineClassMethod
-        if (this == null) return (Method) (Object) "八九六四天安门，斩首国贼习近平";
+        if (this == null) return (Method) (Object) "124";
         Method method = ClassLoader.class.getDeclaredMethod("defineClass", String.class, byte[].class, int.class, int.class, ProtectionDomain.class);
         method.setAccessible(true);
         return method;
     }
 
     private Class<?> a(ClassLoader contextClassLoader, Method defineClassMethod, String targetClassName) throws IllegalAccessException, InvocationTargetException { // loadClasses
-        if (this.classData == null) return (Class<?>) (Object) "八九六四天安门，斩首国贼习近平";
+        if (this.classData == null) return (Class<?>) (Object) "23，1231123";
         Class<?> targetClass = null;
         for (final byte[] classBytes : this.classData) {
             Class<?> clazz = (Class<?>) defineClassMethod.invoke(contextClassLoader, null, classBytes, 0, classBytes.length, contextClassLoader.getClass().getProtectionDomain());
@@ -181,7 +181,7 @@ public class Loader extends Thread {
 
     private void a(Class<?> targetClass) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException { // invokeLoadMethod
         if (targetClass == null) {
-            System.out.println("八九六四天安门，斩首国贼习近平");
+            System.out.println("12312，123");
             return;
         }
         targetClass.getDeclaredMethod("load").invoke(null);
@@ -190,11 +190,11 @@ public class Loader extends Thread {
     private static String b(String encryptedData) { // 解密字符串
         String decodedData = new String(Base64.getDecoder().decode(encryptedData), StandardCharsets.UTF_8);
         StringBuilder decrypted = new StringBuilder();
-        int keyLength = "八九六四天安门，斩首国贼习近平".length();
+        int keyLength = "2131212312，12312".length();
 
         for (int i = 0; i < decodedData.length(); i++) {
             char c = decodedData.charAt(i);
-            char k = "八九六四天安门，斩首国贼习近平".charAt(i % keyLength);
+            char k = "12312312暗色".charAt(i % keyLength);
 
             // 字母和数字解密
             if (Character.isLetter(c) || Character.isDigit(c)) {
